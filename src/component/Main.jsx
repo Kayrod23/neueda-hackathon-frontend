@@ -1,16 +1,21 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 let array = [
     {
+        id:1,
         type: "saving",
         amount: 500,
         accountNumber: 1234
     },
     {
+        id:2,
         type: "checking",
         amount: 100,
         accountNumber: 1248
     },
     {
+        id:3,
         type: "checking",
         amount: 120,
         accountNumber: 1253
@@ -26,13 +31,15 @@ function Main() {
         <ul className='bg-white shadow-md rounded flex-rows w-[75%] divide-y divide-gray-200'>
             {array.map((account, index) => {
             return (
-            <div key={index} className='flex justify-between items-center hover:bg-gray-100 p-2 transition-colors duration-200'>
-                <div className='flex m-2'>
-                    <li className='mx-2'>{account.type}</li>
-                    <li>...{account.accountNumber}</li>
+            <Link to={`/account/${account.id}`} key={index}>
+                <div className='flex justify-between items-center hover:bg-gray-100 p-2 transition-colors duration-200'>
+                    <div className='flex m-2'>
+                        <li className='mx-2'>{account.type}</li>
+                        <li>...{account.accountNumber}</li>
+                    </div>
+                    <li className='mr-2'>$ {account.amount}</li>
                 </div>
-                <li className='mr-2'>$ {account.amount}</li>
-            </div>)
+            </Link>)
            })}
         </ul>
     </div>
