@@ -4,21 +4,22 @@ import { Link } from 'react-router-dom'
 let array = [
     {
         id:1,
-        type: "saving",
+        type: "Saving",
         amount: 500,
-        accountNumber: 1234
+        accountNumber: 1234,
+        transactions: [-500, 300, 200, -450]
     },
     {
         id:2,
-        type: "checking",
+        type: "Checking",
         amount: 100,
-        accountNumber: 1248
+        accountNumber: 1248,
     },
     {
         id:3,
-        type: "checking",
+        type: "Checking",
         amount: 120,
-        accountNumber: 1253
+        accountNumber: 1253,
     }, 
 ]
 
