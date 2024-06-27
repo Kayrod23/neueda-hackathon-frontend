@@ -19,6 +19,11 @@ console.log(client)
                 </Link>)
            }) : null}
         </ul>
+    
+
+      <div className="mt-96 absolute -bottom-0.5">
+        <a href="http://localhost:8080/swagger-ui/index.html#/" className="text-blue-900 font-semibold sm:text-2xl">Swagger-UI Page</a>
+      </div>
     </div>
   )
 }
