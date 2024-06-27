@@ -18,7 +18,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <NavBar/>
+      <NavBar client={client}/>
       <Routes>
         <Route path="/" element={<Main client={client}/>}/>
         <Route path="/account/:id" element={<Account client={client}/>}/>
